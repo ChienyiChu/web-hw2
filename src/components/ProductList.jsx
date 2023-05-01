@@ -1,21 +1,23 @@
 import ProductItem from "../components/ProductItem"
-import Products from "../Products.json"
+//import Products from "../json/products.json"
 import {Row,Col} from "antd";
-const ProductList = () =>{
+
+function ProductList ({products,isLoading}){
+  
     return(
     <div>
      <h1 className="text-center">IMAGES</h1>
      <hr className="divider--dark"/>
       <Row gutter={[32,32]}>
-       {Products.map(product => (
+       {products.map(product => (
         <Col
-         key={product.id}
+       
          sm={{span: 12}}
          lg={{span: 8}}
          xl={{span: 6}}
          xxl={{span: 6}}
          >
-          <ProductItem product={product}/>
+          <ProductItem product={product} key={product.id}/>
          </Col>
        ))}
       </Row>

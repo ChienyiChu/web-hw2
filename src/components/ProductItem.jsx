@@ -1,6 +1,6 @@
 const ProductItem = ({product}) =>{
     return(
-        <article className="image__layout py-3 py-sm-5">
+        <article className="image__layout py-3 py-sm-5" key={product.id}>
         <div className="container">
 
           <div className="row">
